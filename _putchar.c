@@ -1,11 +1,10 @@
-#include "main.h"
+#include <unistd.h>
 /**
- * _putchar - imprint the character c to standard output
- * @c: The character to print to the screen
- *
- * Return: 0 on success.
- */
+* _putchar - write character c to the stdout
+* @c: the character
+* Return: 1 on success and -1 otherwise
+*/
 int _putchar(char c)
 {
-	return (imprint(1, &c, 1));
+	return (write(1, &c, 1));
 }
