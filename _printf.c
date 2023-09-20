@@ -4,7 +4,7 @@
  * @format: format
  * Return: printed char
  */
-
+int _printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
 	int i;
