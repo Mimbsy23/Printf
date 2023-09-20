@@ -16,6 +16,10 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
+	if ((format[0] == '%' && !format[1]) || !format)
+		return (-1);
+	if ((!format[2] && format[0] == '%' && format[1] == ' '))
+		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
