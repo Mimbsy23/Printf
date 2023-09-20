@@ -4,7 +4,7 @@
  * @format: format
  * Return: printed char
  */
-int _printf(const char *format, ...);
+
 int _printf(const char *format, ...)
 {
 	int i;
@@ -13,9 +13,7 @@ int _printf(const char *format, ...)
 
 	va_start(mims, format);
 	if (format == NULL)
-	{
 		return (-1);
-	}
 	if ((format[0] == '%' && !format[1]) || !format)
 		return (-1);
 	if ((!format[2] && format[0] == '%' && format[1] == ' '))
@@ -42,9 +40,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-		{
 			ncount += _putchar(format[i]);
-		}
 	}
 	va_end(mims);
 	return (ncount);
